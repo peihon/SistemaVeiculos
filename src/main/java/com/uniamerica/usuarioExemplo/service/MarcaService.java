@@ -21,12 +21,6 @@ public class MarcaService {
 
     public List<Marca> getByMarca(String marca) { return marcaRepository.findByMarca(marca); }
 
-    public List<Marca> getByModelo(String modelo) { return marcaRepository.findByModelo(modelo); }
-
-    public List<Marca> getByVeiculo(String veiculo) { return marcaRepository.findByVeiculo(veiculo); }
-
-    public List<Marca> getByPlaca(String placa) { return marcaRepository.findByPlaca(placa); }
-
     public Marca createMarca(Marca marca) {
         return  marcaRepository.save(marca);
     }

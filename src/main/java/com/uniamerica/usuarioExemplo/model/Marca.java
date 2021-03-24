@@ -13,6 +13,12 @@ public class Marca {
 
     private String marca;
 
+    private String modelo;
+
+    private String veiculo;
+
+    private String placa;
+
     public Long getId() {
         return id;
     }

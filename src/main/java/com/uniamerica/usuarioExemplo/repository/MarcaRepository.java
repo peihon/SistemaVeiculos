@@ -11,9 +11,4 @@ public interface MarcaRepository extends JpaRepository<Marca, Long> {
 
     List<Marca> findByMarca(String marca);
 
-    List<Marca> findByVeiculo(String veiculo);
-
-    List<Marca> findByPlaca(String placa);
-
-
 }

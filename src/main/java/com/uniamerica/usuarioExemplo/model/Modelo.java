@@ -13,6 +13,10 @@ public class Modelo {
 
     private String modelo;
 
+    private String veiculo;
+
+    private String placa;
+
     public Long getId() {
         return id;
     }
@@ -28,5 +32,7 @@ public class Modelo {
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
+
+}
 
 

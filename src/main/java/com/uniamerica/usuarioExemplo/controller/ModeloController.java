@@ -13,7 +13,7 @@ import java.util.List;
 @RequestMapping("/modelo")
 public class ModeloController {
 
-    private  final ModeloService modeloService;
+    private final ModeloService modeloService;
 
     @Autowired
     public ModeloController(ModeloService modeloService) {
@@ -31,13 +31,15 @@ public class ModeloController {
     }
 
     @GetMapping
-    public ResponseEntity<?> listaTodos(){
+    public ResponseEntity<?> listaTodos() {
         List<Modelo> modeloList = modeloService.listaTodos();
 
-        if(!modeloList.isEmpty()){
+        if (!modeloList.isEmpty()) {
             return new ResponseEntity<>(modeloList, null, HttpStatus.OK);
 
         }
         return new ResponseEntity<>(modeloList, null, HttpStatus.NO_CONTENT);
 
     }
+
+}
