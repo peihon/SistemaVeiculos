@@ -53,16 +53,4 @@ public class MarcaController {
         return new ResponseEntity<>(listMarca, null, HttpStatus.NO_CONTENT);
     }
 
-    @GetMapping("modelo/{modelo}")
-    public ResponseEntity<?> listaPorNome(@PathVariable String modelo){
-
-        List<Marca> listModelo = marcaService.getByModelo(modelo);
-
-        if(!listModelo.isEmpty()){
-            return new ResponseEntity<>(listModelo, null, HttpStatus.OK);
-        }
-        return new ResponseEntity<>(listModelo, null, HttpStatus.NO_CONTENT);
-    }
-
-
 }

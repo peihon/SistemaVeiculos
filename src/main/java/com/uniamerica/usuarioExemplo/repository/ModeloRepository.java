@@ -1,14 +1,14 @@
 package com.uniamerica.usuarioExemplo.repository;
 
-import com.uniamerica.usuarioExemplo.model.Marca;
+import com.uniamerica.usuarioExemplo.model.Modelo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface MarcaRepository extends JpaRepository<Marca, Long> {
+public interface ModeloRepository extends JpaRepository<Modelo, Long> {
 
-    List<Marca> findByMarca(String marca);
+    List<Modelo> findByModelo(String modelo);
 
 }

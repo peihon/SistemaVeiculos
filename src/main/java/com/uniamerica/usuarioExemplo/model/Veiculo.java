@@ -1,18 +1,19 @@
 package com.uniamerica.usuarioExemplo.model;
 
-
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Marca")
+@Table(name = "Veiculo")
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public class Marca {
+public class Veiculo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String marca;
+    private String veiculo;
+
+    private String placa;
 
     public Long getId() {
         return id;
@@ -22,12 +23,12 @@ public class Marca {
         this.id = id;
     }
 
-    public String getMarca() {
-        return marca;
-    }
+    public String getVeiculo() { return veiculo; }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
+    public void setVeiculo(String veiculo) { this.veiculo = veiculo; }
+
+    public String getPlaca() { return placa; }
+
+    public void setPlaca(String placa) { this.placa = placa; }
 
 }

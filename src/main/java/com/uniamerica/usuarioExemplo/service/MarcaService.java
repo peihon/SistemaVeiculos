@@ -21,8 +21,6 @@ public class MarcaService {
 
     public List<Marca> getByMarca(String marca) { return marcaRepository.findByMarca(marca); }
 
-    public List<Marca> getByModelo(String modelo) {return marcaRepository.findByModelo(modelo); }
-
     public Marca createMarca(Marca marca) {
         return  marcaRepository.save(marca);
     }
