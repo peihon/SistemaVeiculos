@@ -35,4 +35,28 @@ public class Marca {
         this.marca = marca;
     }
 
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getVeiculo() {
+        return veiculo;
+    }
+
+    public void setVeiculo(String veiculo) {
+        this.veiculo = veiculo;
+    }
+
+    public String getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+
 }

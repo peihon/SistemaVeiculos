@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/marca")
+@RequestMapping("/marcas")
 public class MarcaController {
 
     private  final MarcaService marcaService;
@@ -42,9 +42,27 @@ public class MarcaController {
 
     }
 
+    @GetMapping("marca/{marca}")
+    public ResponseEntity<?> listaPorMarca(@PathVariable String marca){
 
+        List<Marca> listMarca = marcaService.getByMarca(marca);
 
+        if(!listMarca.isEmpty()){
+            return new ResponseEntity<>(listMarca, null, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(listMarca, null, HttpStatus.NO_CONTENT);
+    }
 
+    @GetMapping("modelo/{modelo}")
+    public ResponseEntity<?> listaPorNome(@PathVariable String modelo){
+
+        List<Marca> listModelo = marcaService.getByModelo(modelo);
+
+        if(!listModelo.isEmpty()){
+            return new ResponseEntity<>(listModelo, null, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(listModelo, null, HttpStatus.NO_CONTENT);
+    }
 
 
 }
